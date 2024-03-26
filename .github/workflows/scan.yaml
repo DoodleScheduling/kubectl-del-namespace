@@ -1,0 +1,50 @@
+name: scan
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '18 10 * * 3'
+
+permissions: {}
+
+jobs:
+  fossa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - name: Run FOSSA scan and upload build data
+        uses: fossa-contrib/fossa-action@6728dc6fe9a068c648d080c33829ffbe56565023 # v2.0.0
+        with:
+          # FOSSA Push-Only API Token
+          fossa-api-key: 956b9b92c5b16eeca1467cebe104f2c3
+          github-token: ${{ github.token }}
+
+  codeql:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for codeQL to write security events
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895 # v2.6.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@9f150ba795bcdde5bcd148bb808cc028dc662bd8 #codeql-bundle-20221020
+        with:
+          languages: go
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@9f150ba795bcdde5bcd148bb808cc028dc662bd8 #codeql-bundle-20221020
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@9f150ba795bcdde5bcd148bb808cc028dc662bd8 #codeql-bundle-20221020

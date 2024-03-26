@@ -1,0 +1,5 @@
+kubectl-del-namespace
+goreportcard.db
+./config.yaml
+coverage.out
+**/charts
