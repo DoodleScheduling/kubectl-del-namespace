@@ -119,6 +119,7 @@ brews:
 krews:
 - ids:
   - main
+  description: kubectl plugin to forcefully delete a kubernetes namespace
   repository:
     owner: doodlescheduling
     name: kubectl-del-namespace

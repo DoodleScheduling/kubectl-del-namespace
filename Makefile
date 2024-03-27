@@ -66,9 +66,6 @@ docker-build: build ## Build docker image with the manager.
 docker-push: ## Push docker image with the manager.
 	docker push ${IMG}
 
-TEST_PROFILE=idp-metadata
-CLUSTER=kind
-
 .PHONY: all style fmt build test vet
 
 # go-install-tool will 'go install' any package $2 and install it to $1
