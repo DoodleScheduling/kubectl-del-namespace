@@ -31,27 +31,27 @@ docker pull ghcr.io/doodlescheduling/kubectl-del-namespace:[version]
 ## Usage
 
 ```
-kubectl del-namespace [namespace]
+kubectl del-namespace [namespaces]
 ```
 
 This runs in a dry-mode and eventually also prints all resources with finalizers.
 Invoke it with the `--yes` flag will delete the namespace and will make sure the namespace gets deleted.
 ```
-kubectl del-namespace [namespace] --yes
+kubectl del-namespace [namespaces] --yes
 ``` 
 
 **Note**: It is recommeneded to specify the resources which are allowed to be cleaned up by ignoring any finalizers and optionally 
 setting an appropriate grace-period to allow controllers to eventually clean up.
 ```
-kubectl del-namespace [namespace] --yes --grace-period=30s --resources helmreleases.helm.toolkit.fluxcd.io,keycloakinfinispanclusters.keycloak.infra.doodle.com,growthbookinstances.growthbook.infra.doodle.com
+kubectl del-namespace [namespaces] --yes --grace-period=30s --resources helmreleases.helm.toolkit.fluxcd.io,keycloakinfinispanclusters.keycloak.infra.doodle.com,growthbookinstances.growthbook.infra.doodle.com
 ```
 
 ## Help
 ```
-Force delete a kubernetes namespace including all resources with blocking finalizers
+Force delete kubernetes namespace(s) including all resources with blocking finalizers
 
 Usage:
-  kubectl del-namespace [namespace] [flags]
+  kubectl del-namespace [namespaces] [flags]
 
 Flags:
       --add_dir_header                   If true, adds the file directory to the header of the log messages
@@ -83,6 +83,7 @@ Flags:
       --skip_headers                     If true, avoid header prefixes in the log messages
       --skip_log_headers                 If true, avoid headers when opening log files (no effect when -logtostderr=true)
       --stderrthreshold severity         logs at or above this threshold go to stderr when writing to files and stderr (no effect when -logtostderr=true or -alsologtostderr=true) (default 2)
+      --timeout duration                 Await timout before fail the command (default 1m0s)
       --tls-server-name string           Server name to use for server certificate validation. If it is not provided, the hostname used to contact the server is used
       --token string                     Bearer token for authentication to the API server
       --user string                      The name of the kubeconfig user to use
