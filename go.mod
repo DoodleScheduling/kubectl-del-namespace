@@ -3,6 +3,7 @@ module github.com/doodlescheduling/kubectl-del-namespace
 go 1.20
 
 require (
+	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/spf13/cobra v1.8.0
 	golang.org/x/exp v0.0.0-20230510235704-dd950f8aeaea
 	golang.org/x/sync v0.5.0
