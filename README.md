@@ -3,7 +3,6 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/doodlescheduling/kubectl-del-namespace)](https://goreportcard.com/report/github.com/doodlescheduling/kubectl-del-namespace)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/DoodleScheduling/kubectl-del-namespace/badge)](https://api.securityscorecards.dev/projects/github.com/DoodleScheduling/kubectl-del-namespace)
 [![Coverage Status](https://coveralls.io/repos/github/DoodleScheduling/kubectl-del-namespace/badge.svg?branch=master)](https://coveralls.io/github/DoodleScheduling/kubectl-del-namespace?branch=master)
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kubectl-del-namespace)](https://artifacthub.io/packages/search?repo=kubectl-del-namespace)
 
 This kubectl plugin will help to forcefully purge an entire kubernetes namespace.
 Yes the kube-apiserver does this already when a namespace is deleted the usual way.
@@ -26,7 +25,7 @@ brew install kubectl-del-namespace
 
 ### Docker
 ```sh
-docker pull ghcr.io/doodlescheduling/kubectl-del-namespace:latest
+docker pull ghcr.io/doodlescheduling/kubectl-del-namespace:[version]
 ```
 
 ## Usage
