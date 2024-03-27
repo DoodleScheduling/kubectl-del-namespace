@@ -3,7 +3,7 @@ project_name: kubectl-del-namespace
 builds:
 - id: main
   main: main.go
-  binary: kubectl-del-namespace
+  binary: kubectl-del_namespace
   goos:
   - linux
   - darwin
@@ -114,7 +114,7 @@ brews:
   homepage: https://github.com/DoodleScheduling/kubectl-del-namespace
   folder: Formula
   test: |
-    system "#{bin}/kubectl-del-namespace -h" 
+    system "#{bin}/kubectl-del_namespace -h" 
 
 krews:
 - ids:
