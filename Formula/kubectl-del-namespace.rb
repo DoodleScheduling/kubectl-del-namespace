@@ -5,20 +5,20 @@
 class KubectlDelNamespace < Formula
   desc "kubectl plugin to forcefully delete a kubernetes namespace"
   homepage "https://github.com/DoodleScheduling/kubectl-del-namespace"
-  version "0.0.3"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_darwin_amd64.tar.gz"
-      sha256 "c147cc16cf3922978accdbcfe124fafe3a3db0d27b437384c9d1c4bcb878c2ed"
+    if Hardware::CPU.arm?
+      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_darwin_arm64.tar.gz"
+      sha256 "6a8989b5808338bdf850b5c438a7f98086b493e90844cb866dea1b5e8408df31"
 
       def install
         bin.install "kubectl-del_namespace"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_darwin_arm64.tar.gz"
-      sha256 "c902b099f63236b84d1fbbbee92df8274abd7242692055ce8521ac900f34d002"
+    if Hardware::CPU.intel?
+      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_darwin_amd64.tar.gz"
+      sha256 "8c2930a97486d0aace558987d9c2d3bfac74776a92682cd9042534f4301bf802"
 
       def install
         bin.install "kubectl-del_namespace"
@@ -28,16 +28,16 @@ class KubectlDelNamespace < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_linux_arm64.tar.gz"
-      sha256 "10bb9dc7e78d01eceaedcbc7fc41082d316d9c9c5a03ffcec2468c6087b2f05e"
+      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_linux_arm64.tar.gz"
+      sha256 "bebe009986fb8a948b119c28afcf0af8a87b4af1612ab815419d7649c5727ce6"
 
       def install
         bin.install "kubectl-del_namespace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_linux_amd64.tar.gz"
-      sha256 "bcaba21a384b915a6f23147958ffbbb6bd7dba844127449beafb25cbe48aceae"
+      url "https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_linux_amd64.tar.gz"
+      sha256 "bfacf81efc14bf1fe293a361c7f0266796505802667540aa193fa1b912f81b90"
 
       def install
         bin.install "kubectl-del_namespace"
