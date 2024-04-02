@@ -4,46 +4,46 @@ kind: Plugin
 metadata:
   name: kubectl-del-namespace
 spec:
-  version: v0.0.3
+  version: v0.0.5
   platforms:
     - bin: kubectl-del_namespace.exe
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_windows_arm64.tar.gz
-      sha256: 434f02c53cf134627726fca6a25fde2b8a7eb5359ef375a5b16d6e67f9ea0e22
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_windows_arm64.tar.gz
+      sha256: 51cb98afd79e6f9b43343103fe1c2d65f83b4f42e9d1f741adc2e23616ec9be5
       selector:
         matchLabels:
           os: windows
           arch: arm64
     - bin: kubectl-del_namespace.exe
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_windows_amd64.tar.gz
-      sha256: a44844eeaef47589bf05e8d88eb0d16bdebeef8409ad0b4e7398ed48c785a3bf
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_windows_amd64.tar.gz
+      sha256: c3e0d05e5372ab93988d15389ab9776ddc877a0a2ed305fefe0a4e932362602e
       selector:
         matchLabels:
           os: windows
           arch: amd64
     - bin: kubectl-del_namespace
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_linux_arm64.tar.gz
-      sha256: 10bb9dc7e78d01eceaedcbc7fc41082d316d9c9c5a03ffcec2468c6087b2f05e
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_linux_arm64.tar.gz
+      sha256: bebe009986fb8a948b119c28afcf0af8a87b4af1612ab815419d7649c5727ce6
       selector:
         matchLabels:
           os: linux
           arch: arm64
     - bin: kubectl-del_namespace
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_linux_amd64.tar.gz
-      sha256: bcaba21a384b915a6f23147958ffbbb6bd7dba844127449beafb25cbe48aceae
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_linux_amd64.tar.gz
+      sha256: bfacf81efc14bf1fe293a361c7f0266796505802667540aa193fa1b912f81b90
       selector:
         matchLabels:
           os: linux
           arch: amd64
     - bin: kubectl-del_namespace
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_darwin_arm64.tar.gz
-      sha256: c902b099f63236b84d1fbbbee92df8274abd7242692055ce8521ac900f34d002
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_darwin_arm64.tar.gz
+      sha256: 6a8989b5808338bdf850b5c438a7f98086b493e90844cb866dea1b5e8408df31
       selector:
         matchLabels:
           os: darwin
           arch: arm64
     - bin: kubectl-del_namespace
-      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.3/kubectl-del-namespace_0.0.3_darwin_amd64.tar.gz
-      sha256: c147cc16cf3922978accdbcfe124fafe3a3db0d27b437384c9d1c4bcb878c2ed
+      uri: https://github.com/DoodleScheduling/kubectl-del-namespace/releases/download/v0.0.5/kubectl-del-namespace_0.0.5_darwin_amd64.tar.gz
+      sha256: 8c2930a97486d0aace558987d9c2d3bfac74776a92682cd9042534f4301bf802
       selector:
         matchLabels:
           os: darwin
